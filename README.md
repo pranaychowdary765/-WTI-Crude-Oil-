@@ -1,0 +1,4 @@
+Description: Daily OHLC with Volume and often Open Interest for the WTI front-month continuous contract (roll-adjusted), reflecting macro events, OPEC+ meetings, EIA inventory prints, and geopolitical shocks; suitable to stress-test the pipeline under commodity seasonality and volatility clustering.
+Applicability: Next day Close regression and up/down classification with volatility aware slices; directly comparable to equities and gold sections using identical preprocessing and walk forward evaluation.
+Attributes: Date, Open, High, Low, Close, Adj Close (if present), Volume, OpenInterest (if present); thousands of rows depending on span used in code.
+Algorithms used: LSTM regression for next day Close; BiLSTM classification for direction; GRU ablation; naïve last close baseline; ARIMA optional for tabular contrast, identical to the report’s framework
